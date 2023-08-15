@@ -1,9 +1,6 @@
 {
     "name": "Brainstorm",
-    "author": [
-        "Sylvain Baillet",
-        "François Tadel"
-    ],
+    "author": "Brainstorm team <https://neuroimage.usc.edu/brainstorm/AboutUs>",
     "description": "Enables to perform the pre-processing steps on EEG data.",
     "tool-version": "v1.0",
     "schema-version": "0.5",
@@ -31,13 +28,15 @@
             "value-key": "[PIPELINE]"
         }
     ],
-    "output-files": {
-        "id": "output_directory",
-        "name": "Output Directory",
-        "optional": false,
-        "description": "Output directory",
-        "path-template": "[BIDS_DATASET]_output"
-    },
+    "output-files": [
+        {
+            "id": "output_directory",
+            "name": "Output Directory",
+            "optional": false,
+            "description": "Output directory",
+            "path-template": "[BIDS_DATASET]_output"
+        }
+    ],
     "suggested-resources": {
         "walltime-estimate": 10800,
         "ram": 8
@@ -46,5 +45,5 @@
         "cbrain:author": "Corentin Labelle <corentin.labelle.1@ulaval.ca>",
         "cbrain:readonly-input-files": true
     },
-    "doi": "https://zenodo.org/record/8250203"
+    "doi": "https://zenodo.org/record/8250478"
 }

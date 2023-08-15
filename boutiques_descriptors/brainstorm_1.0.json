@@ -1,6 +1,9 @@
 {
     "name": "Brainstorm",
-    "author": "Corentin Labelle",
+    "author": [
+        "Sylvain Baillet",
+        "François Tadel"
+    ],
     "description": "Enables to perform the pre-processing steps on EEG data.",
     "tool-version": "v1.0",
     "schema-version": "0.5",
@@ -28,18 +31,20 @@
             "value-key": "[PIPELINE]"
         }
     ],
-    "output-files": [
-        {
-            "id": "output_directory",
-            "name": "Output Directory",
-            "optional": false,
-            "description": "Output directory",
-            "path-template": "[BIDS_DATASET]_output"
-        }
-    ],
-    "suggested-resources": {
-            "walltime-estimate": 10800,
-            "ram": 8
+    "output-files": {
+        "id": "output_directory",
+        "name": "Output Directory",
+        "optional": false,
+        "description": "Output directory",
+        "path-template": "[BIDS_DATASET]_output"
     },
-    "doi": "https://doi.org/10.5281/zenodo.8139228"
+    "suggested-resources": {
+        "walltime-estimate": 10800,
+        "ram": 8
+    },
+    "custom": {
+        "cbrain:author": "Corentin Labelle <corentin.labelle.1@ulaval.ca>",
+        "cbrain:readonly-input-files": true
+    },
+    "doi": "https://zenodo.org/record/8250203"
 }

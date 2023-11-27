@@ -1,0 +1,49 @@
+{
+    "name": "Brainstorm",
+    "author": "Brainstorm team <https://neuroimage.usc.edu/brainstorm/AboutUs>",
+    "description": "Enables to perform the pre-processing steps on EEG data.",
+    "tool-version": "v1.0.1",
+    "schema-version": "0.5",
+    "command-line": "bash /Brainstorm/Brainstorm-Tool/src/run_bst_tool.sh /usr/local/MATLAB/MATLAB_Runtime/v910/ [BIDS_DATASET] [PIPELINE]",
+    "container-image": {
+        "image": "corentinlabelle/brainstorm-tool:v1.0.1",
+        "index": "docker://",
+        "type": "singularity"
+    },
+    "inputs": [
+        {
+            "id": "bids_dataset",
+            "name": "BIDS dataset",
+            "optional": false,
+            "type": "File",
+            "description": "EEG BIDS dataset",
+            "value-key": "[BIDS_DATASET]"
+        },
+        {
+            "id": "pipeline",
+            "name": "Pipeline",
+            "optional": false,
+            "type": "File",
+            "description": "Pipeline",
+            "value-key": "[PIPELINE]"
+        }
+    ],
+    "output-files": [
+        {
+            "id": "output_directory",
+            "name": "Output Directory",
+            "optional": false,
+            "description": "Output directory",
+            "path-template": "[BIDS_DATASET]_output"
+        }
+    ],
+    "suggested-resources": {
+        "walltime-estimate": 36000,
+        "ram": 8
+    },
+    "custom": {
+        "cbrain:author": "Corentin Labelle <corentin.labelle.1@ulaval.ca>",
+        "cbrain:readonly-input-files": true
+    },
+    "doi": "https://zenodo.org/record/8250478"
+}

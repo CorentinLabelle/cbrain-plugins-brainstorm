@@ -4,7 +4,7 @@
     "description": "Enables to perform the pre-processing steps on EEG data.",
     "tool-version": "v1.0.2",
     "schema-version": "0.5",
-    "command-line": "bash /Brainstorm/Brainstorm-Tool/src/run_bst_tool.sh /usr/local/MATLAB/MATLAB_Runtime/v910/ [BIDS_DATASET] [PIPELINE]",
+    "command-line": "bash /Brainstorm/Brainstorm-Tool/src/run_bst_tool.sh /usr/local/MATLAB/MATLAB_Runtime/v910/ [BIDS_DATASET] [PIPELINE] [ADDITIONAL_FILES]",
     "container-image": {
         "image": "corentinlabelle/brainstorm-tool:v1.0.2",
         "index": "docker://",
@@ -26,6 +26,14 @@
             "type": "File",
             "description": "Pipeline",
             "value-key": "[PIPELINE]"
+        },
+        {
+            "id": "additional_files",
+            "name": "Additional Files",
+            "optional": true,
+            "type": "File",
+            "description": "Folder with files needed for the analysis",
+            "value-key": "[ADDITIONAL_FILES]"
         }
     ],
     "output-files": [

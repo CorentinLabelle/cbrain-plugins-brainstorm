@@ -6,7 +6,7 @@
     "schema-version": "0.5",
     "command-line": "bash /Brainstorm/Brainstorm-Tool/src/run_bst_tool.sh /usr/local/MATLAB/MATLAB_Runtime/v910/ [BIDS_DATASET] [PIPELINE] [ADDITIONAL_FILES]",
     "container-image": {
-        "image": "corentinlabelle/brainstorm-tool:v1.0.3",
+        "image": "corentinlabelle/brainstorm-tool:v1.0.4",
         "index": "docker://",
         "type": "singularity"
     },

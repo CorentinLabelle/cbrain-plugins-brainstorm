@@ -51,7 +51,13 @@
     },
     "custom": {
         "cbrain:author": "Corentin Labelle <corentin.labelle.1@ulaval.ca>",
-        "cbrain:readonly-input-files": true
+        "cbrain:readonly-input-files": true,
+        "cbrain:integrator_modules": {
+             "BoutiquesBidsSingleSubjectMaker": "bids_dataset",
+             "BoutiquesFileTypeVerifier": {
+                "bids_dataset": [ "BidsSubject" ]
+             }
+        }
     },
     "doi": "https://zenodo.org/record/8250478"
 }
